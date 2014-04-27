@@ -1,0 +1,11 @@
+name    'wtanaka-mkdir'
+version '0.0.1'
+source 'http://wtanaka.com/puppet-wtanaka-mkdir'
+author 'Wesley Tanaka <http://wtanaka.com/>'
+license 'GNU Public License, Version 2'
+summary 'Helper function to work around lack of recursive directory
+creation in puppet v2'
+description 'This module defines a custom function all_parents() which
+you can use to create a directory and all of its ancestors
+simultaneously.'
+project_page 'http://wtanaka.com/puppet-wtanaka-mkdir'
