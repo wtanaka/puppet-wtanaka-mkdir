@@ -5,7 +5,7 @@ module Puppet::Parser::Functions
    newfunction(:all_parents, :type => :rvalue) do |args|
       output = []
       path = args[0]
-      if path == '/' or path == '' or path == '.':
+      if path == '/' or path == '' or path == '.'
          return output
       end
       path = File.dirname(path)
