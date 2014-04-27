@@ -1,5 +1,5 @@
 name    'wtanaka-mkdir'
-version '0.0.1'
+version '0.0.2'
 source 'http://wtanaka.com/puppet-wtanaka-mkdir'
 author 'Wesley Tanaka <http://wtanaka.com/>'
 license 'GNU Public License, Version 2'
