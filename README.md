@@ -11,15 +11,19 @@ This example creates a symbolic link from `/some/path/to/a/file`
 pointing at `/vagrant`
 
     $path = '/some/path/to/a/file'
-    $path_parents = all_parents($path) 
-    file { $path_to_project_parents:
+
+    $path_parents = all_parents($path)
+
+    file { $path_parents:
       ensure => 'directory',
-      mode => 775,
-    }
-    file { $path_to_project:
-      ensure => 'link',
-      target => '/vagrant',
+      mode   => 775,
     }
 
-For the latest information, visit the 
+    file { $path:
+      ensure  => 'link',
+      target  => '/vagrant',
+      require => File[ $path_parents ],
+    }
+
+For the latest information, visit the
 [project homepage](http://wtanaka.com/puppet-wtanaka-mkdir)
