@@ -4,6 +4,11 @@ puppet-wtanaka-mkdir
 This module defines a custom function `all_parents()` which you can
 use to create a directory and all of its ancestors simultaneously.
 
+Fortunately the file type autorequires its parent (if created as a
+ file resource)
+
+See Puppet feature #6368 'File type should autorequire all parents'
+
 Example
 -------
 
